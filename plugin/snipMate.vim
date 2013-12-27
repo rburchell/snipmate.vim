@@ -127,6 +127,8 @@ fun! GetSnippets(dir, filetypes)
 		call s:DefineSnips(a:dir, ft, ft)
 		if ft == 'objc' || ft == 'cpp' || ft == 'cs'
 			call s:DefineSnips(a:dir, 'c', ft)
+		elseif ft == 'qml'
+			call s:DefineSnips(a:dir, 'javascript', ft)
 		elseif ft == 'xhtml'
 			call s:DefineSnips(a:dir, 'html', 'xhtml')
 		endif
