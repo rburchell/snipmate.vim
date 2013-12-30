@@ -1,6 +1,24 @@
+snippet imp
+	import ${1} ${2}
 snippet Rectangle
 	Rectangle {
 		width: ${1}
 		height: ${2}
 		color: "${3:red}"
 	}${4}
+snippet MouseArea
+	MouseArea {
+		width: ${1}
+		height: ${2}
+		onClicked: ${3:{}}
+	}${4}
+snippet Image
+	Image {
+		source: ${1}
+	}${2}
+snippet Timer
+	Timer {
+		interval: ${1}
+		repeat: ${2}
+		onTriggered: ${3:{}}
+	}
